@@ -20,9 +20,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={` ${inter.className} flex flex-col text-neutral-200 container mx-auto m-0 p-0 min-h-screen`}>
+        <body className={` ${inter.className}`}>
+        <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen overflow-hidden">
+          <div className="container mx-auto flex grow flex-col px-4">
           <Header />
           {children}
+          </div>
           <Image
             src={mountains}
             placeholder="blur"
@@ -32,6 +35,7 @@ export default function RootLayout({
             alt="Mountains"
             className="object-cover -z-50 dark:grayscale"
           />
+        </div>
         </body>
       </html>
     </ClerkProvider>
