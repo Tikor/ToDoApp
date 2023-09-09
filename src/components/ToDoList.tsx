@@ -22,11 +22,15 @@ export default async function ToDoList(){
     todos = await getTodos(userId)
   }
   
-  return(
+  return(    
     <ul className="flex flex-col w-full px-4 gap-y-2">
-      {todos.map(todo => (
-        <ToDoItem key={todo.id} {...todo}/>
-      ))}
+      {todos.length === 0 ? <div className="text-center">Welcome 🎉 Click on the New button to get started</div> :(
+        <>
+        {todos.map(todo => (
+          <ToDoItem key={todo.id} {...todo}/>
+        ))}
+        </>
+      )}      
     </ul>
   )
 }
