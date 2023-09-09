@@ -12,11 +12,11 @@ export default function Header(){
           {userId ? (
           <>
             <UserButton afterSignOutUrl="/"/>    
-            <Link href="/new" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none">New</Link>
+            <Link href="/new" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">New</Link>
           </>
           ) : (<>
-            <Link href="/signIn" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none">Login</Link>
-            <Link href="/signUp" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none">Sign-Up</Link>
+            <Link href="/signIn" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">Login</Link>
+            <Link href="/signUp" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">Sign-Up</Link>
           </>)}          
         </div>
       </header>

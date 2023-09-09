@@ -6,14 +6,14 @@ export default function Home(){
 
   return (<>
     <div className="container flex grow flex-col items-center min-h-full m-0 p-0">
-      <div className="grow">
+      <div className="grow w-full">
         {userId ? (
           <ToDoList />
         ) : (              
           <div>A simple ToDo application utilizing Next.js, Clerk & Neon Database. Login to see & add ToDo's</div>
         ) }
       </div>
-      <div className="my-2 text-white/80">Updated at: 2023-09-01</div>
+      <div className="my-2 w-full text-center text-white/80">Updated at: 2023-09-01</div>
     </div>
   </>)
 }

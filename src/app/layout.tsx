@@ -21,7 +21,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={` ${inter.className}`}>
-        <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen overflow-hidden">
+        <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen w-full overflow-hidden">
           <div className="container mx-auto flex grow flex-col px-4">
           <Header />
           {children}

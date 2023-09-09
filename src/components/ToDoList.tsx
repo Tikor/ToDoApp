@@ -8,6 +8,9 @@ function getTodos(userId:string|null){
       where:{
         createdBy: userIdString,
       },
+      orderBy:{
+        createdAt: 'desc'
+      }
     })
 }
 
@@ -20,7 +23,7 @@ export default async function ToDoList(){
   }
   
   return(
-    <ul className="pl-4">
+    <ul className="flex flex-col w-full px-4 gap-y-2">
       {todos.map(todo => (
         <ToDoItem key={todo.id} {...todo}/>
       ))}
