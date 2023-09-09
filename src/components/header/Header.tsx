@@ -6,7 +6,8 @@ export default function Header(){
   const { userId } : { userId: string | null } = auth()
     return(
         <header className="flex justify-between items-center my-4">
-        <h1 className="text-2xl">ToDo App</h1>
+        
+        <Link href="/sign-in" className="text-2xl text-slate-300 px-2 py-1 outline-none">ToDo App</Link>
         <div className="flex gap-2">
 
           {userId ? (

@@ -1,23 +1,6 @@
-import { prisma } from "@/db";
-import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation"
-import Link from "next/link";
-
-async function createToDo(data: FormData){
-    "use server"
-    const { userId } : { userId: string | null } = auth()
-    const title = data.get("title")?.valueOf()
-
-    if(typeof title !== "string" || title.length === 0){
-        throw new Error("Invalid Title")
-    }
-    if(!userId){
-        throw new Error("Unauthorized")
-    }
-    await prisma.todo.create({data: {title, complete: false, createdBy: userId as string}})
-    redirect("/")
-}
-
+import Link from "next/link"
+import { createToDo } from "@/components/Actions"
+import StandardButton from "@/components/common/button/StandardButton"
 
 export default function Page(){
 return (
