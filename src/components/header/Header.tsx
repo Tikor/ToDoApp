@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { UserButton, auth } from "@clerk/nextjs"
+import StandardButton from "../common/button/StandardButton"
 
 
 export default function Header(){
@@ -13,11 +14,11 @@ export default function Header(){
           {userId ? (
           <>
             <UserButton afterSignOutUrl="/"/>    
-            <Link href="/new" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">New</Link>
+            <Link href="/new"><StandardButton>New</StandardButton></Link>
           </>
           ) : (<>
-            <Link href="/sign-in" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">Login</Link>
-            <Link href="/sign-up" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none">Sign-Up</Link>
+            <Link href="/sign-in"><StandardButton>Login</StandardButton></Link>
+            <Link href="/sign-up"><StandardButton>Sign-Up</StandardButton></Link>
           </>)}          
         </div>
       </header>

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { createToDo } from "@/components/Actions"
-import StandardButton from "@/components/common/button/StandardButton"
+import SubmitButton from "@/components/common/button/SubmitButton"
 
 export default function Page(){
 return (
@@ -22,12 +22,7 @@ return (
             >
                 Cancel
             </Link>
-            <button
-                type="submit"
-                className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none"
-            >
-                Create
-            </button>
+            <SubmitButton name="Create" />
         </div>
     </form>    
     </>

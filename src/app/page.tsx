@@ -12,7 +12,7 @@ export default function Home(){
           <div>A simple ToDo application utilizing Next.js, Clerk & Neon Database. Login to see & add ToDo's</div>
         ) }
       </div>
-      <div className="my-2 w-full text-center text-white/80">Updated at: 2023-09-01</div>
+      <div className="my-2 w-full text-center text-white/80">Updated at: 2023-09-19</div>
     </div>
   </>)
 }
