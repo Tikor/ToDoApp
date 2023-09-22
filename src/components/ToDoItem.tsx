@@ -1,9 +1,10 @@
 "use client"
+
+import { XCircle } from 'lucide-react'
+
 import { useTransition, useState } from "react"
-import Image from "next/image"
 import { toggleToDo } from "./Actions"
 import { deleteToDo } from "./Actions"
-import TrashIcon from "./common/icons/TrashIcon"
 
 interface ToDoItemProps {
     id: string
@@ -24,7 +25,7 @@ export function ToDoItem({id, title, complete}: ToDoItemProps){
     }
 
     return(
-        <li className="flex w-full gap-1 justify-start px-2 border
+        <li className="flex w-full gap-1 justify-start px-2 py-1 border
          border-neutral-400 dark:border-neutral-300 rounded-lg outline-none
          bg-white shadow-lg dark:bg-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-500
          text-slate-500 dark:text-slate-400 select-none">
@@ -37,8 +38,8 @@ export function ToDoItem({id, title, complete}: ToDoItemProps){
             </button>
 
             <div className="flex">
-               <button onClick={() => startDeleteTransition(()=>deleteToDo(id))}> 
-                <TrashIcon className="w-6 h-6 hover:fill-red-800 fill-neutral-400"/>
+               <button onClick={() => startDeleteTransition(()=>deleteToDo(id))}>
+                <XCircle className="hover:text-red-800 text-neutral-400" />
                </button>
             </div>
             </>)}       

@@ -30,7 +30,7 @@ export default async function ToDoList(){
           <ToDoItem key={todo.id} {...todo}/>
         ))}
         </>
-      )}      
+      )}
     </ul>
   )
 }
