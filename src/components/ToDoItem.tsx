@@ -1,12 +1,9 @@
 "use client"
 import { XCircle } from 'lucide-react'
-import { Button } from "./ui/button"
 
 import { useTransition, useState } from "react"
-import Image from "next/image"
 import { toggleToDo } from "./Actions"
 import { deleteToDo } from "./Actions"
-import TrashIcon from "./common/icons/TrashIcon"
 
 interface ToDoItemProps {
     id: string
