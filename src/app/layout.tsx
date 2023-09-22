@@ -1,16 +1,13 @@
 import './globals.css'
-import '@radix-ui/themes/styles.css';
 
-import { Theme } from '@radix-ui/themes';
+const inter = Inter({ subsets: ['latin'] })
 
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
-import mountains from '../../public/mountains.jpg'
 import Header from '@/components/header/Header'
-
-const inter = Inter({ subsets: ['latin'] })
+import mountains from '../../public/mountains.jpg'
 
 export const metadata: Metadata = {
   title: 'ToDo App',
@@ -24,7 +21,6 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <Theme>
           <body className={` ${inter.className}`}>
           <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen w-full overflow-hidden">
             <div className="container mx-auto flex grow flex-col px-4">
@@ -42,7 +38,6 @@ export default function RootLayout({
             />
           </div>
           </body>
-        </Theme>
       </html>
     </ClerkProvider>
   )
