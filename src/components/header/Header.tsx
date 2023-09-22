@@ -8,7 +8,7 @@ export default function Header(){
     return(
         <header className="flex justify-between items-center my-4">
         
-        <Link href="/sign-in" className="text-2xl text-slate-300 px-2 py-1 outline-none">ToDo App</Link>
+        <Link href="/list" className="text-2xl text-slate-300 px-2 py-1 outline-none">ToDo App</Link>
         <div className="flex gap-2">
 
           {userId ? (

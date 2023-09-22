@@ -22,7 +22,7 @@ export async function deleteToDo(id: string){
         id: id
       },
     })
-    revalidatePath('/')
+    revalidatePath('/list')
 }
 
 export async function createToDo(data: FormData){
@@ -36,5 +36,5 @@ export async function createToDo(data: FormData){
       throw new Error("Unauthorized")
   }
   await prisma.todo.create({data: {title, complete: false, createdBy: userId as string}})
-  redirect("/")
+  redirect("/list")
 }
