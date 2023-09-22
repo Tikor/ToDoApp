@@ -11,7 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.23.3",
+    "@clerk/nextjs": "^4.24.0",
     "@prisma/client": "5.2.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/themes": "2.0.0-rc.3",
@@ -34,6 +34,6 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "prisma": "^5.2.0"
+    "prisma": "^5.3.1"
   }
 }
