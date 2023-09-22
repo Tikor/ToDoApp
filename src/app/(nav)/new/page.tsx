@@ -17,7 +17,7 @@ return (
         />
         <div className="flex gap-1 justify-end">
             <Link
-                href="/list"
+                href="/"
                 className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none"
             >
                 Cancel

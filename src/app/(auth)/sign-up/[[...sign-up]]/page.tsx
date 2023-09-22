@@ -5,5 +5,4 @@ export default function Page() {
     <div className="container flex mt-5 justify-center">
       <SignUp />
     </div>
-  )  
-}
+)}
