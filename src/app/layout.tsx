@@ -1,4 +1,8 @@
 import './globals.css'
+import '@radix-ui/themes/styles.css';
+
+import { Theme } from '@radix-ui/themes';
+
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
@@ -20,23 +24,25 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={` ${inter.className}`}>
-        <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen w-full overflow-hidden">
-          <div className="container mx-auto flex grow flex-col px-4">
-          <Header />
-          {children}
+        <Theme>
+          <body className={` ${inter.className}`}>
+          <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen w-full overflow-hidden">
+            <div className="container mx-auto flex grow flex-col px-4">
+            <Header />
+            {children}
+            </div>
+            <Image
+              src={mountains}
+              placeholder="blur"
+              quality={100}
+              fill
+              sizes="100vw"
+              alt="Mountains"
+              className="object-cover -z-50 dark:grayscale"
+            />
           </div>
-          <Image
-            src={mountains}
-            placeholder="blur"
-            quality={100}
-            fill
-            sizes="100vw"
-            alt="Mountains"
-            className="object-cover -z-50 dark:grayscale"
-          />
-        </div>
-        </body>
+          </body>
+        </Theme>
       </html>
     </ClerkProvider>
   )

@@ -24,7 +24,7 @@ export function ToDoItem({id, title, complete}: ToDoItemProps){
     }
 
     return(
-        <li className="flex w-full gap-1 justify-start px-2 border
+        <li className="flex w-full gap-1 justify-start px-2 py-1 border
          border-neutral-400 dark:border-neutral-300 rounded-lg outline-none
          bg-white shadow-lg dark:bg-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-500
          text-slate-500 dark:text-slate-400 select-none">
