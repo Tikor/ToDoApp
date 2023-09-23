@@ -1,5 +1,5 @@
 import { auth } from "@clerk/nextjs"
-import ToDoList from "./ToDoList"
+import ToDoList from "./components/ToDoList"
 
 export default function Home(){
   const { userId } : { userId: string | null } = auth()

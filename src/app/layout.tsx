@@ -6,7 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Header from '@/app/(nav)/Header'
+import Header from '@/app/(nav)/components/Header'
 import mountains from '../../public/mountains.jpg'
 
 export const metadata: Metadata = {
