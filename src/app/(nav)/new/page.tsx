@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { createToDo } from "@/components/Actions"
+import { createToDo } from "./Actions"
 import SubmitButton from "@/components/common/button/SubmitButton"
 
 export default function Page(){
@@ -26,5 +26,4 @@ return (
         </div>
     </form>    
     </>
-)
-}
+)}

@@ -1,6 +1,6 @@
 import {prisma} from "@/db"
 import { auth } from '@clerk/nextjs'
-import { ToDoItem } from "@/app/(nav)/ToDoItem"
+import { ToDoItem } from "@/app/(nav)/components/ToDoItem"
 
 function getTodos(userId:string|null){
     const userIdString:string = userId ?? ""

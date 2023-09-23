@@ -2,8 +2,8 @@
 import { XCircle } from 'lucide-react'
 
 import { useTransition, useState } from "react"
-import { toggleToDo } from "../../components/Actions"
-import { deleteToDo } from "../../components/Actions"
+import { toggleToDo } from "./Actions"
+import { deleteToDo } from "./Actions"
 
 interface ToDoItemProps {
     id: string
