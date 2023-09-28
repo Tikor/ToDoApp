@@ -3,8 +3,9 @@ import {UserButton, SignedIn, SignedOut, SignInButton, SignUpButton} from "@cler
 
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import StandardButton from "../../../components/common/button/StandardButton"
+import { Button } from "@/components/ui/button"
 import HeaderSpan from "./HeaderSpan"
+import { ModeToggle } from "./ModeToggle"
 
 export default function Header(){
 const pathname = usePathname()
@@ -18,20 +19,22 @@ const pathname = usePathname()
       <div className="flex gap-2">
         <SignedIn>
           <UserButton afterSignOutUrl="/"/>
-          <Link href="/new" className="relative">
-            <StandardButton>New</StandardButton>
+          <div className="relative">
+            <Button variant="light" asChild><Link href="/new">New</Link></Button>
+            {/* <StandardButton>New</StandardButton> */}
             {pathname === '/new' && (<HeaderSpan />)}                        
-          </Link>
+          </div>
         </SignedIn>
         
         <SignedOut>
           <SignInButton mode='modal'>
-            <StandardButton>Login</StandardButton>
+            <Button variant="light">Login</Button>            
           </SignInButton>
           <SignUpButton mode='modal'>
-            <StandardButton>Sign-Up</StandardButton>
+            <Button variant="light">Sign-Up</Button>            
           </SignUpButton>
-        </SignedOut>
+        </SignedOut> 
+        <div className="mr-1"><ModeToggle /></div>
       </div>
     </nav>
 )}

@@ -31,14 +31,14 @@ export function ToDoItem({id, title, complete}: ToDoItemProps){
             {isDeleting ? <span>Deletion in progress...</span>:(<>            
             
             <button onClick={e => handleCheck()}
-            className="flex grow justify-start cursor-pointer gap-1 items-center">
+            className="flex grow justify-start cursor-pointer gap-1 items-center text-neutral-400 dark:text-slate-100">
                 {isChecked ? "☑" : "☐"}
-                <span className={`${isChecked ? "line-through" : ""} ml-1 p-0 `}>{title}</span>
+                <span className={`${isChecked ? "line-through" : ""} ml-1 p-0`}>{title}</span>
             </button>
 
             <div className="flex">
                <button onClick={() => startDeleteTransition(()=>deleteToDo(id))}> 
-                <XCircle className="hover:text-red-800 text-neutral-400"/>
+                <XCircle className="hover:text-red-800 text-neutral-400 dark:text-slate-100 dark:hover:text-red-400"/>
                </button>
             </div>
             </>)}       
