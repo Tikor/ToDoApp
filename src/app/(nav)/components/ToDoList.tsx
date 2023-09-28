@@ -1,18 +1,6 @@
-import {prisma} from "@/db"
 import { auth } from '@clerk/nextjs'
 import { ToDoItem } from "@/app/(nav)/components/ToDoItem"
-
-function getTodos(userId:string|null){
-    const userIdString:string = userId ?? ""
-    return prisma.todo.findMany({
-      where:{
-        createdBy: userIdString,
-      },
-      orderBy:{
-        createdAt: 'desc'
-      }
-    })
-}
+import { getTodos } from "./Actions"
 
 export default async function ToDoList(){
   const { userId } : { userId: string | null } = auth()
@@ -23,7 +11,7 @@ export default async function ToDoList(){
   }
   
   return(    
-    <ul className="flex flex-col w-full px-4 gap-y-2">
+    <ul className="flex flex-col w-full px-4 gap-y-2 mt-4">
       {todos.length === 0 ? <div className="text-center">Welcome 🎉 Click on the New button to get started</div> :(
         <>
         {todos.map(todo => (
@@ -32,5 +20,4 @@ export default async function ToDoList(){
         </>
       )}      
     </ul>
-  )
-}
+)}

@@ -2,11 +2,9 @@ import Link from "next/link"
 import { createToDo } from "./Actions"
 import SubmitButton from "@/components/common/button/SubmitButton"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 export default function Page(){
 return (
-    <>
     <form action={createToDo} className="flex gap-2 flex-col">
         <span className="text-slate-300">New to-do:</span>
         <input
@@ -17,9 +15,7 @@ return (
         />
         <div className="flex gap-1 justify-end">
             <Button variant="light" asChild><Link href="/">Cancel</Link></Button>
-            {/* <button type="submit">submit</button> */}
             <SubmitButton name="Create" />
         </div>
-    </form>    
-    </>
+    </form>
 )}
