@@ -1,29 +1,24 @@
 import Link from "next/link"
 import { createToDo } from "./Actions"
+import PageWrapper from "../components/PageWrapper"
 import SubmitButton from "@/components/common/button/SubmitButton"
+import { Button } from "@/components/ui/button"
 
 export default function Page(){
 return (
-    <>
-    <header className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl">New</h1>       
-    </header>
-
+    <PageWrapper>
     <form action={createToDo} className="flex gap-2 flex-col">
+        <span className="text-slate-300">New to-do:</span>
         <input
+            autoFocus
             type="text"
             name="title"
-            className="border border-slate-300 bg-transparent rounded px-2 py-1 outline-none focus-within:border-slate-100"
+            className="border bg-white/40 text-white border-none rounded-lg px-2 py-2 outline-none focus-within:border-slate-100"
         />
         <div className="flex gap-1 justify-end">
-            <Link
-                href="/"
-                className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-white/10 focus-within:bg-white/10 outline-none"
-            >
-                Cancel
-            </Link>
+            <Button variant="light" asChild><Link href="/">Cancel</Link></Button>
             <SubmitButton name="Create" />
         </div>
-    </form>    
-    </>
+    </form>
+    </PageWrapper>
 )}

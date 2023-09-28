@@ -1,5 +1,5 @@
 import Spinner from "../spinner/Spinner"
-import StandardButton from "./StandardButton"
+import { Button } from "@/components/ui/button"
 
 interface SpinnerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{  
   name: string,
@@ -7,14 +7,13 @@ interface SpinnerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export default function SpinnerButton({name, isLoading, ...props}: SpinnerButtonProps){
-
   return (
-    <StandardButton {...props} disabled={isLoading}>
+    <Button {...props} disabled={isLoading} variant="light">
       {isLoading ? (
         <span className="p-1"><Spinner size="h-4 w-4" /></span>       
       ) : (
         <span>{name}</span>
       )}
-    </StandardButton>
+    </Button>
   )
 }
