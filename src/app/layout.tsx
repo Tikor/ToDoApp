@@ -6,7 +6,6 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Header from '@/app/(nav)/components/Header'
 import mountains from '../../public/mountains.jpg'
 
 export const metadata: Metadata = {
@@ -19,9 +18,7 @@ export default function RootLayout({children}:{children: React.ReactNode}) {
     <ClerkProvider>
       <body className={` ${inter.className}`}>
       <div className="relative flex flex-col text-neutral-200  m-0 p-0 min-h-screen w-full overflow-hidden">
-        <div className="container mx-auto flex grow flex-col px-4">
-        {children}
-        </div>
+        <div className="container mx-auto flex grow flex-col px-4">{children}</div>
         <Image
           src={mountains}
           placeholder="blur"
