@@ -1,10 +1,12 @@
 import Link from "next/link"
 import { createToDo } from "./Actions"
+import PageWrapper from "../components/PageWrapper"
 import SubmitButton from "@/components/common/button/SubmitButton"
 import { Button } from "@/components/ui/button"
 
 export default function Page(){
 return (
+    <PageWrapper>
     <form action={createToDo} className="flex gap-2 flex-col">
         <span className="text-slate-300">New to-do:</span>
         <input
@@ -18,4 +20,5 @@ return (
             <SubmitButton name="Create" />
         </div>
     </form>
+    </PageWrapper>
 )}
